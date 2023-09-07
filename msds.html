@@ -20,8 +20,11 @@
   <script>
 	function openNewWindow(url) 
 	{
+		var x = screen.width/2 - 300/2;
+		var y = screen.height/2 - 520/2;
+	
         var name = '_blank';
-        var specs = 'menubar=no,status=no,toolbar=no,innerWidth=300,innerHeight=512,chrome=1,centerscreen=1';
+        var specs = 'menubar=no,status=no,toolbar=no,innerWidth=300,innerHeight=520,chrome=1,centerscreen=1,left='+x+',top='+y+'';
         var newWindow = window.open(url, name, specs);
         newWindow.focus();
     }
