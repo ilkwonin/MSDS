@@ -1,0 +1,110 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+MSDS 최신화 검증
+</title>
+</head>
+<body>
+<style>
+*{
+    box-sizing: border-box;
+}
+body{
+	margin:0px;
+	width: 300px;
+	height: 500px;
+    overflow-x: hidden;
+}
+h2{
+	user-select: none;
+	text-align: center;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+textarea{
+	resize:none;
+	width:100%;
+	height:100%;
+	font-size:
+}
+input{
+	margin-left:0.5em;
+	margin-right:0.5em;
+	font-size: 1.1rem;
+}
+#mainBody{
+	border-width: medium;
+    border-color: #0070C0;
+    border-style: solid;
+    border-radius: 1.5em;
+	width:100%;
+	min-height:100%;
+}
+#logo{
+	background-image: url(./logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 10%;
+	margin-top: 4em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+}
+#aggrText{
+	margin-left: 1em;
+    margin-right: 1em;
+	margin-top: 2em;
+    margin-bottom: 0.5em;
+	height: 50%;
+}
+#aggrButton{
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	display: flex;
+	justify-content: center;
+}
+</style>
+<div id="mainBody">
+	<div id="logo"></div>
+	<h2>MSDS 최신화 검증</h2>
+	<div id="aggrText">
+		<textarea id="mainText" readonly placeholder="text">
+MSDS 정합성 검사(이하 '본 프로그램) 사용에 앞서 다음 내용을 충분 히 숙지하신 후, 사용해 주시기 바랍니다.
+
+• 보안 정책 및 유의 사항
+
+1. ﻿﻿﻿본 프로그램은 회사의 업무를 지원하기 위해 제공되는 프로그램으로, 이용자는 이를 회사 업무 처리 목적으로만 사용하여야 하며, 개인의 사적인 용도로는 사용할 수 없습니다.
+2. 임직원은, 당사 모바일 기기 준수 사항에 따라 모바일 기기 보호를 위한 화면 잠금 설정, 임의 개조 금지, 백신 설치 및 시스템 패치 등을 따라야 합니다.
+3. 이용자는 회사의 보안 규정(모바일 보안 지침 등)에 따라 본 프로그램 상의 제반 정보가 유출 되지 않도록 보안을 철저히 유지해야 합니다.</textarea>
+	</div>
+	<div id="aggrButton">
+	
+		<input type="button" value="동의" onClick="doAction()"></input>
+		
+		<script>			
+			function doAction()
+			{
+				const urlParams = new URL(location.href).searchParams;
+				const AppId = urlParams.get('AppId');
+				
+				if ( AppId === "Apple" ) {	
+					//alert("App download start!");
+					window.opener.DownloadAppleApp();
+					window.close();
+				} else {					
+					//alert("App download start!");
+					window.opener.DownloadAndroidApp();
+					window.close();
+				}
+			}
+		</script>
+		
+		<input type="button" value="미동의" onClick="window.close()"></input>
+	</div>
+</div>
+</body>
+</html>
