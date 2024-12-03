@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="kr">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSDS 앱 다운로드</title>
+  <style>
+    li {
+        padding: 20px 0;
+    }
+  </style>
+ </head>
+ <body>
+  
+  <p><input type="submit" value="MSDS 애플 (iOS) APP 다운로드" onclick="openNewWindow('msdsAggrement.html?AppId=Apple')"></p>
+  
+  <p><input type="submit" value="MSDS 안드로이드 APP 다운로드" onclick="openNewWindow('msdsAggrement.html?AppId=Android')"></p>
+    
+  <script>
+	function openNewWindow(url) 
+	{
+		var sizeX = 300;
+		var sizeY = 520;
+		var x = screen.width / 2 - sizeX / 2;
+		var y = screen.height / 2 - sizeY / 2;
+		
+        var name = '_blank';
+        var specs = 'menubar=no,status=no,toolbar=no,innerWidth='+sizeX+',innerHeight='+sizeY+',chrome=1,centerscreen=1,left='+x+',top='+y+'';
+        var newWindow = window.open(url, name, specs);
+        newWindow.focus();
+    }
+	function DownloadAppleApp() {
+		location.href = "itms-services://?action=download-manifest&url=https://ilkwonin.github.io/MSDS/manifest.plist";	
+	}
+	function DownloadAndroidApp() {
+		location.href = "https://ilkwonin.github.io/MSDS/MSDSv2.apk";		
+	}
+  </script>
+ </body>
+</html>
+
+<!--
+<ul>
+   <li><a href="itms-services://?action=download-manifest&url=https://ilkwonin.github.io/MSDS/manifest.plist">MSDS 애플 (iOS) APP 다운로드</a></li>
+   <li><a href="https://ilkwonin.github.io/MSDS/MSDSv2.apk">MSDS 안드로이드 APP 다운로드</a></li>
+  </ul>
+  
+ function openNewWindow(url) {
+        var name = '_blank';
+        var specs = 'menubar=no,status=no,toolbar=no,innerWidth=500,innerHeight=200,chrome=1,centerscreen=1';
+        var newWindow = window.open(url, name, specs);
+        newWindow.focus();
+      }
+ -->
