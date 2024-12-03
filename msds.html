@@ -12,7 +12,25 @@
   </style>
  </head>
  <body>
+  <ul>
+   <li><a href="itms-services://?action=download-manifest&url=https://ilkwonin.github.io/MSDS/manifest.plist">MSDS 애플 (iOS) APP 다운로드</a></li>
+   <li><a href="https://ilkwonin.github.io/MSDS/MSDSv2.apk">MSDS 안드로이드 APP 다운로드</a></li>
+  </ul>
   
+ function openNewWindow(url) {
+        var name = '_blank';
+        var specs = 'menubar=no,status=no,toolbar=no,innerWidth=500,innerHeight=200,chrome=1,centerscreen=1';
+        var newWindow = window.open(url, name, specs);
+        newWindow.focus();
+      }
+ </body>
+</html>
+
+<!--
+
+
+
+
   <p><input type="submit" value="MSDS 애플 (iOS) APP 다운로드" onclick="openNewWindow('msdsAggrement.html?AppId=Apple')"></p>
   
   <p><input type="submit" value="MSDS 안드로이드 APP 다운로드" onclick="openNewWindow('msdsAggrement.html?AppId=Android')"></p>
@@ -37,19 +55,4 @@
 		location.href = "https://ilkwonin.github.io/MSDS/MSDSv2.apk";		
 	}
   </script>
- </body>
-</html>
-
-<!--
-<ul>
-   <li><a href="itms-services://?action=download-manifest&url=https://ilkwonin.github.io/MSDS/manifest.plist">MSDS 애플 (iOS) APP 다운로드</a></li>
-   <li><a href="https://ilkwonin.github.io/MSDS/MSDSv2.apk">MSDS 안드로이드 APP 다운로드</a></li>
-  </ul>
-  
- function openNewWindow(url) {
-        var name = '_blank';
-        var specs = 'menubar=no,status=no,toolbar=no,innerWidth=500,innerHeight=200,chrome=1,centerscreen=1';
-        var newWindow = window.open(url, name, specs);
-        newWindow.focus();
-      }
  -->
